@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f38508;
+    color: #ffffff;
+}
+body {
+    background-image: url("img.jpg");
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+}
+.background-section {
+    background-image: url("img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#navbar {
+    background-color: #000000;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    flex: 1;
+}
+
+#logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu {
+    display: flex;
+    list-style: none;
+}
+
+#menu li {
+    margin-left: 20px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+#menu a:hover {
+    color: #d15c08; 
+}
+
+#toggle {
+    display: none;
+}
+
+#home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#intro {
+    width: 100%;
+}
+
+#intro h1 {
+    font-size: 36px;
+    color: #def721;
+    margin-bottom: 20px;
+}
+
+#intro p {
+    font-size: 18px;
+    color: #16ebbc;
+    margin-bottom: 30px;
+}
+
+#intro .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #5e5157;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#intro .btn:hover {
+    background-color: #34e95e; 
+}
+
+@media screen and (max-width: 768px) {
+    #menu {
+        display: none;
+    }
+    
+    #toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    #toggle span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        margin-bottom: 5px;
+        transition: 0.3s;
+    }
+
+    #toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    #toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -8px);
+    }
+
+    #intro {
+        text-align: center;
+    }
+}
